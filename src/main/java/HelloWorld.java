@@ -11,6 +11,13 @@ public class HelloWorld {
         List<String> list = new ArrayList<>(Arrays.asList("a", "b", "c"));
         Iterator<String> iter = list.iterator();
 
-        System.out.println(IteratorUtils.size(iter));
+        /*
+            Example using IteratorUtils, an apache commons utility that is not built into java
+            to show an example of how gradle can be used. The example takes an iterator
+            and finds the index of the first string that matches the given predicate.
+            In this case, it finds the first string equal to "b"!
+         */
+        System.out.println(IteratorUtils.indexOf(iter, s -> s.equals("b")));
+
     }
 }
